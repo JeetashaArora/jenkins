@@ -1,3 +1,6 @@
+# Install react-scripts
+RUN npm install -g react-scripts
+
 # Use the official Node.js image as base
 FROM node:12.2.0-alpine
 
