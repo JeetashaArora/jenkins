@@ -1,14 +1,15 @@
 # Use the official Node.js image as base
 FROM node:12.2.0-alpine
 
-# Install react-scripts
-RUN npm install
+
 
 # Set the working directory inside the container
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
+# Install react-scripts
+RUN npm install
 
 # Copy the src and public folders to the working directory
 COPY src/ ./src
