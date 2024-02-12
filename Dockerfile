@@ -12,7 +12,7 @@ COPY src/ ./src
 COPY public/ ./public
 
 # Install dependencies using npm ci
-RUN sudo npm ci
+RUN npm ci
 
 # Expose port 3000 to the outside world
 EXPOSE 3000
