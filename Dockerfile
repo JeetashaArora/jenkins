@@ -1,5 +1,5 @@
 # Use the official Node.js image as base
-FROM node:14
+FROM node:12.2.0-Alpine
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src/ ./src
 COPY public/ ./public
 
 # Install dependencies using npm ci
-RUN npm ci
+RUN sudo npm ci
 
 # Expose port 3000 to the outside world
 EXPOSE 3000
