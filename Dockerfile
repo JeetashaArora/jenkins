@@ -2,7 +2,7 @@
 FROM node:12.2.0-alpine
 
 # Install react-scripts
-RUN npm install -g react-scripts
+RUN npm install
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,8 +14,6 @@ COPY package*.json ./
 COPY src/ ./src
 COPY public/ ./public
 
-# Install dependencies using npm ci
-RUN npm install 
 
 # Expose port 3000 to the outside world
 EXPOSE 3030
