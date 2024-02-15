@@ -17,7 +17,7 @@ COPY public/ ./public
 
 
 # Expose port 3000 to the outside world
-EXPOSE 3000
+EXPOSE 3030
 
 # Start the React app
 CMD ["npm", "start"]
